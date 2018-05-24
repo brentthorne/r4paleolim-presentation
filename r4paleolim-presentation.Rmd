@@ -1,8 +1,8 @@
 ---
 title: "R for Paleolimnology"
 subtitle: "PALS 2018 Workshop"
-author: "Brent Thorne & Dewey Dunnington"
-date: "(`r Sys.Date()`)"
+author: "Brent Thorne<sup>1</sup> & Dewey Dunnington<sup>2</sup>"
+footnote: "<sup>1</sup>Department of Earth Sciences, Brock University"
 output:
   xaringan::moon_reader:
     css: ["default","brock","brock-fonts"]
