@@ -134,6 +134,13 @@ thead, tfoot, tr:nth-child(even) { background: none; }
   margin-bottom: 18px;
 }
 
+.big {
+	font-size: 200%;
+}
+
+.medium {
+	font-size: 150%;
+}
 /* H2 fonts */
 .title-slide h2 {
   color: #cc0300;
@@ -213,7 +220,7 @@ thead, tfoot, tr:nth-child(even) { background: none; }
 
 /* Add padding to all slides for 16:9 aspect ratio */
 .remark-slide-content {
-  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+  padding-left: 100px; /* delete this for 4:3 aspect ratio */
 }
 
 /* Color adjustments for text */
@@ -245,7 +252,6 @@ strong {
 /* Force black */
 .black {
   color: black;
-  font-weight: bold;
 }
 
 /* Add white tag */
@@ -260,11 +266,6 @@ h1 {
 
 h3 {
   color: #515151;
-}
-
-/* Font size tags */
-.big {
-  font-size: 1.5em;
 }
 
 /* bu blockquote */

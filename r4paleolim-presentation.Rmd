@@ -5,6 +5,7 @@ author: "Brent Thorne<sup>1</sup> & Dewey Dunnington<sup>2</sup>"
 footnote: "<sup>1</sup>Department of Earth Sciences, Brock University"
 output:
   xaringan::moon_reader:
+    seal: false
     css: ["default","brock","brock-fonts"]
     lib_dir: libs
     nature:
@@ -17,28 +18,46 @@ output:
 options(htmltools.dir.version = FALSE)
 library(tidyverse)
 ```
+class: title-slide
+
+# R for Paleolimnology
+## PALS 2018 Workshop
+
+<img src="http://www.pals2017.com/uploads/9/7/7/0/97702750/weblogo_orig.jpeg" width="200">
+
+### W. Brent Thorne<sup>1</sup> & Dewey Dunnington<sup>2</sup>
+
+.footnote[<sup>.BUred[1]</sup>Department of Earth Sciences, Brock University, St. Catharines, ON, Canada L2S 3A1; bthorne2@brocku.ca
+
+<sup>.BUred[2]</sup>Department of Earth and Environmental Science, Acadia University, Wolfville, NS, Canada B4P 2R5;
+]
+
+---
+
 background-image: url(https://funnytimes.com/wp-content/uploads/1995/10/199510043.jpg)
 background-position: 95% 95%
+class: big
 
 # What You Will Learn
 
 --
 
-### 1. What is R and what is RStudio?
+1. What is R and what is RStudio?
 
 --
 
-### 2. How do I get my data into R?
+2. How do I get my data into R?
 
 --
 
-### 3. How to structure and transform your data
+3. How to structure and transform your data
 
 --
 
-### 4. How to visualize your paleolimnological data
+4. How to visualize your paleolimnological data
 
 ---
+
 # Getting Started
 
 Install **[R](https://cran.r-project.org/)** and **[RStudio](https://rstudio.com/)** onto your machince.
@@ -54,7 +73,7 @@ Install **[R](https://cran.r-project.org/)** and **[RStudio](https://rstudio.com
 <img src="https://www.w-t-w.org/en/wp-content/uploads/2014/02/Studying-Computer-Programming.jpg" width=200 align="middle">
 
 ---
-# Tutorial 1 Basic R
+# Tutorial 1 .black[Basic R]
 
 ![](https://paleolimbot.github.io/r4paleolim/01-Basic-R-Figs/r_console.png)
 
@@ -71,7 +90,7 @@ We will be using the <a href="https://www.tidyverse.org/" target="_blank"><img s
 ```{r eval=FALSE, tidy=FALSE}
 install.packages("tidyverse")
 
-library(tidyverse) #<<
+library(tidyverse)
 ```
 
 --

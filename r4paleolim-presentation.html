@@ -10,38 +10,49 @@
   </head>
   <body>
     <textarea id="source">
-class: center, middle, inverse, title-slide
+
+
+
+class: title-slide
 
 # R for Paleolimnology
 ## PALS 2018 Workshop
-### Brent Thorne<sup>1</sup> &amp; Dewey Dunnington<sup>2</sup>
+
+&lt;img src="http://www.pals2017.com/uploads/9/7/7/0/97702750/weblogo_orig.jpeg" width="200"&gt;
+
+### W. Brent Thorne&lt;sup&gt;1&lt;/sup&gt; &amp; Dewey Dunnington&lt;sup&gt;2&lt;/sup&gt;
+
+.footnote[&lt;sup&gt;.BUred[1]&lt;/sup&gt;Department of Earth Sciences, Brock University, St. Catharines, ON, Canada L2S 3A1; bthorne2@brocku.ca
+
+&lt;sup&gt;.BUred[2]&lt;/sup&gt;Department of Earth and Environmental Science, Acadia University, Wolfville, NS, Canada B4P 2R5;
+]
 
 ---
 
-
-
 background-image: url(https://funnytimes.com/wp-content/uploads/1995/10/199510043.jpg)
 background-position: 95% 95%
+class: big
 
 # What You Will Learn
 
 --
 
-### 1. What is R and what is RStudio?
+1. What is R and what is RStudio?
 
 --
 
-### 2. How do I get my data into R?
+2. How do I get my data into R?
 
 --
 
-### 3. How to structure and transform your data
+3. How to structure and transform your data
 
 --
 
-### 4. How to visualize your paleolimnological data
+4. How to visualize your paleolimnological data
 
 ---
+
 # Getting Started
 
 Install **[R](https://cran.r-project.org/)** and **[RStudio](https://rstudio.com/)** onto your machince.
@@ -57,7 +68,7 @@ Install **[R](https://cran.r-project.org/)** and **[RStudio](https://rstudio.com
 &lt;img src="https://www.w-t-w.org/en/wp-content/uploads/2014/02/Studying-Computer-Programming.jpg" width=200 align="middle"&gt;
 
 ---
-# Tutorial 1 Basic R
+# Tutorial 1 .black[Basic R]
 
 ![](https://paleolimbot.github.io/r4paleolim/01-Basic-R-Figs/r_console.png)
 
@@ -75,7 +86,7 @@ We will be using the &lt;a href="https://www.tidyverse.org/" target="_blank"&gt;
 ```r
 install.packages("tidyverse")
 
-*library(tidyverse)
+library(tidyverse)
 ```
 
 --
@@ -441,9 +452,9 @@ my_tibble
 ## # A tibble: 3 x 3
 ##   number name  is_one
 ##    &lt;dbl&gt; &lt;chr&gt; &lt;lgl&gt; 
-## 1      1 one   TRUE  
-## 2      2 two   FALSE 
-## 3      3 three FALSE
+## 1     1. one   TRUE  
+## 2     2. two   FALSE 
+## 3     3. three FALSE
 ```
 
 ---
@@ -608,12 +619,12 @@ head(halifax_geochem) # will display the first few rows of the data
 ## # A tibble: 6 x 9
 ##   core_id depth_cm age_ad C_percent `C/N` d13C_permille d15N_permille
 ##   &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;
-## 1 BEN15-2      0    2016.      14.8  12.2         -30.2          2.46
-## 2 BEN15-2      0.5  2015.      14.7  12.2         -30.3          2.45
-## 3 BEN15-2      1    2014.      14.9  11.9         -30.4          2.34
-## 4 BEN15-2      1.5  2013.      14.5  11.7         -30.3          2.53
-## 5 BEN15-2      2    2011.      14.4  11.6         -30.4          2.66
-## 6 BEN15-2      2.5  2010.      14.4  11.9         -30.3          2.48
+## 1 BEN15-2    0.     2016.      14.8  12.2         -30.2          2.46
+## 2 BEN15-2    0.500  2015.      14.7  12.2         -30.3          2.45
+## 3 BEN15-2    1.00   2014.      14.9  11.9         -30.4          2.34
+## 4 BEN15-2    1.50   2013.      14.5  11.7         -30.3          2.53
+## 5 BEN15-2    2.00   2011.      14.4  11.6         -30.4          2.66
+## 6 BEN15-2    2.50   2010.      14.4  11.9         -30.3          2.48
 ## # ... with 2 more variables: K_percent &lt;dbl&gt;, Ti_percent &lt;dbl&gt;
 ```
 
@@ -805,16 +816,16 @@ halifax_geochem %&gt;%
 ## # A tibble: 326 x 9
 ##    core_id depth_cm age_ad C_percent `C/N` d13C_permille d15N_permille
 ##    &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;
-##  1 BEN15-2      0    2016.      14.8  12.2         -30.2          2.46
-##  2 BEN15-2      0.5  2015.      14.7  12.2         -30.3          2.45
-##  3 BEN15-2      1    2014.      14.9  11.9         -30.4          2.34
-##  4 BEN15-2      1.5  2013.      14.5  11.7         -30.3          2.53
-##  5 BEN15-2      2    2011.      14.4  11.6         -30.4          2.66
-##  6 BEN15-2      2.5  2010.      14.4  11.9         -30.3          2.48
-##  7 BEN15-2      3    2008.      14.4  11.9         -30.3          2.53
-##  8 BEN15-2      3.5  2005.      14.3  12.0         -30.2          2.60
-##  9 BEN15-2      4    2002.      14.0  12.0         -30.2          2.60
-## 10 BEN15-2      4.5  1999.      13.7  12.1         -30.2          2.48
+##  1 BEN15-2    0.     2016.      14.8  12.2         -30.2          2.46
+##  2 BEN15-2    0.500  2015.      14.7  12.2         -30.3          2.45
+##  3 BEN15-2    1.00   2014.      14.9  11.9         -30.4          2.34
+##  4 BEN15-2    1.50   2013.      14.5  11.7         -30.3          2.53
+##  5 BEN15-2    2.00   2011.      14.4  11.6         -30.4          2.66
+##  6 BEN15-2    2.50   2010.      14.4  11.9         -30.3          2.48
+##  7 BEN15-2    3.00   2008.      14.4  11.9         -30.3          2.53
+##  8 BEN15-2    3.50   2005.      14.3  12.0         -30.2          2.60
+##  9 BEN15-2    4.00   2002.      14.0  12.0         -30.2          2.60
+## 10 BEN15-2    4.50   1999.      13.7  12.1         -30.2          2.48
 ## # ... with 316 more rows, and 2 more variables: K_percent &lt;dbl&gt;,
 ## #   Ti_percent &lt;dbl&gt;
 ```
@@ -833,16 +844,16 @@ halifax_geochem %&gt;%
 ## # A tibble: 326 x 9
 ##    core_id depth_cm age_ad C_percent `C/N` d13C_permille d15N_permille
 ##    &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;
-##  1 BEN15-2       29  1742.      14.5  13.4         -29.3          3.54
-##  2 BEN15-2       28  1751.      14.5  13.5         -29.3          3.60
-##  3 BEN15-2       27  1759.      15.1  13.4         -29.4          3.60
-##  4 BEN15-2       26  1768.      15.9  13.5         -29.5          3.57
-##  5 BEN15-2       25  1776.      16.7  13.4         -29.6          3.42
-##  6 BEN15-2       24  1784.      16.8  13.4         -29.5          3.42
-##  7 BEN15-2       23  1793.      16.5  13.5         -29.4          3.39
-##  8 BEN15-2       22  1801.      17.2  13.4         -29.4          3.41
-##  9 BEN15-2       21  1810.      17.3  13.6         -29.4          3.22
-## 10 BEN15-2       20  1818.      17.6  13.5         -29.4          3.18
+##  1 BEN15-2      29.  1742.      14.5  13.4         -29.3          3.54
+##  2 BEN15-2      28.  1751.      14.5  13.5         -29.3          3.60
+##  3 BEN15-2      27.  1759.      15.1  13.4         -29.4          3.60
+##  4 BEN15-2      26.  1768.      15.9  13.5         -29.5          3.57
+##  5 BEN15-2      25.  1776.      16.7  13.4         -29.6          3.42
+##  6 BEN15-2      24.  1784.      16.8  13.4         -29.5          3.42
+##  7 BEN15-2      23.  1793.      16.5  13.5         -29.4          3.39
+##  8 BEN15-2      22.  1801.      17.2  13.4         -29.4          3.41
+##  9 BEN15-2      21.  1810.      17.3  13.6         -29.4          3.22
+## 10 BEN15-2      20.  1818.      17.6  13.5         -29.4          3.18
 ## # ... with 316 more rows, and 2 more variables: K_percent &lt;dbl&gt;,
 ## #   Ti_percent &lt;dbl&gt;
 ```
@@ -922,16 +933,16 @@ halifax_geochem %&gt;%
 ## # A tibble: 326 x 5
 ##    core_id K_percent  K_ppm Ti_percent Ti_ppm
 ##    &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;
-##  1 BEN15-2     1.00  10026       0.169  1693 
-##  2 BEN15-2     1.09  10857.      0.182  1823 
-##  3 BEN15-2     0.978  9782       0.168  1678 
-##  4 BEN15-2     0.942  9423       0.166  1664 
+##  1 BEN15-2     1.00  10026.      0.169  1693.
+##  2 BEN15-2     1.09  10857.      0.182  1823.
+##  3 BEN15-2     0.978  9782.      0.168  1678.
+##  4 BEN15-2     0.942  9423.      0.166  1664.
 ##  5 BEN15-2     1.08  10784.      0.183  1832.
-##  6 BEN15-2     1.09  10863       0.183  1830 
-##  7 BEN15-2     1.04  10374.      0.176  1762 
-##  8 BEN15-2     0.97   9700       0.167  1670 
-##  9 BEN15-2     1.12  11175       0.179  1791 
-## 10 BEN15-2     1.01  10064.      0.17   1700.
+##  6 BEN15-2     1.09  10863.      0.183  1830.
+##  7 BEN15-2     1.04  10374.      0.176  1762.
+##  8 BEN15-2     0.970  9700.      0.167  1670.
+##  9 BEN15-2     1.12  11175.      0.179  1791.
+## 10 BEN15-2     1.01  10064.      0.170  1700.
 ## # ... with 316 more rows
 ```
 
