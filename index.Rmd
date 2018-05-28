@@ -648,7 +648,9 @@ halifax_geochem %>%
   arrange(core_id, depth_cm)
 ```
 
---
+---
+## Arranging (sorting) A Data Frame
+
 
 - Or descending depth order (most recent last):
 
