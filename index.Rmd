@@ -258,7 +258,7 @@ start:end
 
 ## Indexing
 
-- What's inside our vector??
+- What's inside our vector?
 
 --
 
