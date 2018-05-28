@@ -19,17 +19,14 @@ options(htmltools.dir.version = FALSE)
 library(tidyverse)
 ```
 class: title-slide
-
 # R for Paleolimnology
 ## PALS 2018 Workshop
 
-<img src="http://www.pals2017.com/uploads/9/7/7/0/97702750/weblogo_orig.jpeg" width="200">
-
 ### W. Brent Thorne<sup>1</sup> & Dewey Dunnington<sup>2</sup>
 
-.footnote[<sup>.BUred[1]</sup>Department of Earth Sciences, Brock University, St. Catharines, ON, Canada L2S 3A1; bthorne2@brocku.ca
+.footnote[<sup>1</sup>Department of Earth Sciences, Brock University, St. Catharines, ON, Canada L2S 3A1; bthorne2@brocku.ca
 
-<sup>.BUred[2]</sup>Department of Earth and Environmental Science, Acadia University, Wolfville, NS, Canada B4P 2R5;
+<sup>2</sup>Department of Earth and Environmental Science, Acadia University, Wolfville, NS, Canada B4P 2R5;
 ]
 
 ---
@@ -37,6 +34,7 @@ class: title-slide
 background-image: url(https://funnytimes.com/wp-content/uploads/1995/10/199510043.jpg)
 background-position: 95% 95%
 class: big
+
 
 # What You Will Learn
 
@@ -58,6 +56,7 @@ class: big
 
 ---
 
+
 # Getting Started
 
 Install **[R](https://cran.r-project.org/)** and **[RStudio](https://rstudio.com/)** onto your machince.
@@ -72,7 +71,10 @@ Install **[R](https://cran.r-project.org/)** and **[RStudio](https://rstudio.com
 
 <img src="https://www.w-t-w.org/en/wp-content/uploads/2014/02/Studying-Computer-Programming.jpg" width=200 align="middle">
 
+.footnote[Please follow allong using the online resource we have built which can be found [here](https://paleolimbot.github.io/r4paleolim/).]
+
 ---
+
 # Tutorial 1 .black[Basic R]
 
 ![](https://paleolimbot.github.io/r4paleolim/01-Basic-R-Figs/r_console.png)
@@ -410,8 +412,8 @@ Use the **Environment** tab in RStudio to see which variables you have already a
 
 ---
 
-# Tutorial 2
-# Working with Tables using the Tidyverse
+
+# Tutorial 2 .black[Working with Tables using the Tidyverse]
 
 - In this tutorial we will use the tidyverse to manipulate and summarise tabular data.
 
@@ -746,3 +748,4 @@ halifax_geochem %>%
 C_percent. Which cores had the highest peak organic value.
 
 - Which cores had the oldest estimated basal date?
+
