@@ -22,7 +22,7 @@ class: title-slide
 # R for Paleolimnology
 ## PALS 2018 Workshop
 
-### W. Brent Thorne<sup>1</sup> & Dewey Dunnington<sup>2</sup>
+### W. Brent Thorne<sup>1</sup> & Dewey W. Dunnington<sup>2</sup>
 
 .footnote[<sup>1</sup>Department of Earth Sciences, Brock University, St. Catharines, ON, Canada L2S 3A1; bthorne2@brocku.ca
 
