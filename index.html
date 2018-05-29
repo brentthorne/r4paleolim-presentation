@@ -995,16 +995,16 @@ halifax_geochem %&gt;%
 
 ```
 ## # A tibble: 8 x 5
-##   core_id mean_CN min_CN max_CN   sd_CN
-##   &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
-## 1 BEN15-2    12.8   11.6   13.6   0.648
-## 2 FCL16-1    14.2   12.1   16.5   1.05 
-## 3 FLE16-1    12.4   10.5   13.3   0.830
-## 4 FLK12-1    12.8   10.6   14.9   1.02 
-## 5 LEM16-1    12.6   11.8   13.1   0.307
-## 6 MAJ15-1    NA     NA     NA   NaN    
-## 7 POC15-2    NA     NA     NA   NaN    
-## 8 SLK13-1    NA     NA     NA   NaN
+##   core_id mean_CN min_CN max_CN  sd_CN
+##   &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+## 1 BEN15-2    12.8   11.6   13.6  0.648
+## 2 FCL16-1    14.2   12.1   16.5  1.05 
+## 3 FLE16-1    12.4   10.5   13.3  0.830
+## 4 FLK12-1    12.8   10.6   14.9  1.02 
+## 5 LEM16-1    12.6   11.8   13.1  0.307
+## 6 MAJ15-1    NA     NA     NA   NA    
+## 7 POC15-2    NA     NA     NA   NA    
+## 8 SLK13-1    NA     NA     NA   NA
 ```
 
 ---
@@ -1052,76 +1052,15 @@ C_percent. Which cores had the highest peak organic value.
 
 ---
 
-# Tutorial 3 .black[Creating Visualizations using ggplot]
+# Tutorial 3
+
+## Creating Visualizations using ggplot
+
+&lt;img src='https://d33wubrfki0l68.cloudfront.net/0ab849ed51b0b866ef6895c253d3899f4926d397/dbf0f/images/hex-ggplot2.png' class='center' width='200'&gt;
 
 ## Prerequisites
 
-
-```r
-install.packages("tidyverse")
-```
-
-
-```r
-library(tidyverse)
-```
-
----
-## Prerequisites
-
-Bring in the data provided by Dewey Dunnington.
-
-
-```r
-halifax_geochem &lt;- read_csv(
-  "http://paleolimbot.github.io/r4paleolim/data/halifax_geochem.csv",
-  col_types = cols(.default = col_guess())
-)
-```
-
----
-## Using ggplot
-
-The Grammar of Graphics (the "gg" in "ggplot") is a way of describing a graphic that is derived from data, which in R is done using the `ggplot()` function and its many friends.
-
---
-
-Unlike other plotting functions, `ggplot()` builds graphics from the data up (rather than starting with a template of a graphic and working backward).
-
----
-## Using ggplot
-
-Before we can use `ggplot` functionality we need to use the skills learned in Tutorial 2 where we filtered our data.
-
---
-
-See if you can use `filter()` on the `halifax_geochem` data to create the `pockwock_data` and `pockwock_major_data` variable.
-
---
-
-```r
-pockwock_data &lt;- filter(halifax_geochem, core_id == "POC15-2")
-
-pockwock_major_data &lt;- filter(halifax_geochem, core_id %in% c("POC15-2", "MAJ15-1"))
-```
-
----
-## Using ggplot
-Now we can start with the `ggplot` example using the `pockwock_major_data`:
-
---
-
-
-```r
-ggplot(data = pockwock_major_data, mapping = aes(x = K_percent, y = Ti_percent)) +
-  geom_point()
-```
-
-```
-## Warning: Removed 1 rows containing missing values (geom_point).
-```
-
-![](index_files/figure-html/unnamed-chunk-60-1.png)&lt;!-- --&gt;
+TEST PLEASE WORK
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
