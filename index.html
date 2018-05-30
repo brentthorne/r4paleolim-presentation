@@ -321,7 +321,7 @@ start:end
 
 ## Indexing
 
-- What's inside our vector??
+- What's inside our vector?
 
 --
 
@@ -951,6 +951,7 @@ halifax_geochem %&gt;%
 ```
 
 ---
+
 ## Summarising A Data Frame
 
 So far we have looked at subsets of `halifax_geochem`, but what if we want per-core averages instead of raw data values? Using the tidyverse, we can `group_by()` the `core_id` column, and `summarise()`:
@@ -977,6 +978,7 @@ halifax_geochem %&gt;%
 ```
 
 ---
+
 ## Summarising A Data Frame
 
 Here `group_by()` gets a list of columns, for which each unique combination of values will get one row in the output. `summarise()` gets a list of expressions that are evaluated for every unique combination of values defined by `group_by()` (e.g., `mean_CN` is the `mean()` of the `C/N` column for each core). Often, we want to include a number of summary columns in the output, which we can do by pasing more expressions to `summarise()`:
@@ -1008,6 +1010,7 @@ halifax_geochem %&gt;%
 ```
 
 ---
+
 ## Summarising A Data Frame
 
 You will notice that in for several cores the summary values are `NA`, or missing. This is because R propogates missing values unless you explicitly tell it not to. To fix this, you could replace ``mean(`C/N`)`` with ``mean(`C/N`, na.rm = TRUE)``. Other useful functions to use inside `summarise()` include `mean()`, `median()`, `sd()`, `sum()`, `min()`, and `max()`. These all take a vector of values and produce a single aggregate value suitable for use in `summarise()`. One special function, `n()`, you can use (with no arguments) inside `summarise()` to tell you how many observations were aggregated to produce the values in that row.
@@ -1040,6 +1043,7 @@ halifax_geochem %&gt;%
 ```
 
 ---
+
 ## Summarising A Data Frame
 ### Exerscises 
 
@@ -1056,72 +1060,7 @@ C_percent. Which cores had the highest peak organic value.
 
 ## Prerequisites
 
-
-```r
-install.packages("tidyverse")
-```
-
-
-```r
-library(tidyverse)
-```
-
----
-## Prerequisites
-
-Bring in the data provided by Dewey Dunnington.
-
-
-```r
-halifax_geochem &lt;- read_csv(
-  "http://paleolimbot.github.io/r4paleolim/data/halifax_geochem.csv",
-  col_types = cols(.default = col_guess())
-)
-```
-
----
-## Using ggplot
-
-The Grammar of Graphics (the "gg" in "ggplot") is a way of describing a graphic that is derived from data, which in R is done using the `ggplot()` function and its many friends.
-
---
-
-Unlike other plotting functions, `ggplot()` builds graphics from the data up (rather than starting with a template of a graphic and working backward).
-
----
-## Using ggplot
-
-Before we can use `ggplot` functionality we need to use the skills learned in Tutorial 2 where we filtered our data.
-
---
-
-See if you can use `filter()` on the `halifax_geochem` data to create the `pockwock_data` and `pockwock_major_data` variable.
-
---
-
-```r
-pockwock_data &lt;- filter(halifax_geochem, core_id == "POC15-2")
-
-pockwock_major_data &lt;- filter(halifax_geochem, core_id %in% c("POC15-2", "MAJ15-1"))
-```
-
----
-## Using ggplot
-Now we can start with the `ggplot` example using the `pockwock_major_data`:
-
---
-
-
-```r
-ggplot(data = pockwock_major_data, mapping = aes(x = K_percent, y = Ti_percent)) +
-  geom_point()
-```
-
-```
-## Warning: Removed 1 rows containing missing values (geom_point).
-```
-
-![](index_files/figure-html/unnamed-chunk-60-1.png)&lt;!-- --&gt;
+test
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
