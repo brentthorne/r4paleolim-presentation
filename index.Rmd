@@ -22,7 +22,7 @@ class: title-slide
 # R for Paleolimnology
 ## PALS 2018 Workshop
 
-### W. Brent Thorne<sup>1</sup> & Dewey Dunnington<sup>2</sup>
+### W. Brent Thorne<sup>1</sup> & Dewey W. Dunnington<sup>2</sup>
 
 .footnote[<sup>1</sup>Department of Earth Sciences, Brock University, St. Catharines, ON, Canada L2S 3A1; bthorne2@brocku.ca
 
@@ -757,8 +757,21 @@ C_percent. Which cores had the highest peak organic value.
 
 ---
 
-# Tutorial 3 .black[Creating Visualizations using ggplot]
+# Tutorial 3
 
+<<<<<<< HEAD
 ## Prerequisites
 
 test
+=======
+## Creating Visualizations using ggplot
+
+<img src='https://d33wubrfki0l68.cloudfront.net/0ab849ed51b0b866ef6895c253d3899f4926d397/dbf0f/images/hex-ggplot2.png' class='center' width='200'>
+
+---
+## Creating Visualizations using ggplot
+
+### Prerequisites 
+
+
+>>>>>>> 6d0fca143b60ed8bc8e9296fc9b1626271f7d243
